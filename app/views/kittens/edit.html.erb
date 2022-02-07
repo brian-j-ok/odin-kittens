@@ -1,3 +1,5 @@
 <h1>Edit Kitten!</h1>
 
 <%= render 'form' %>
+
+<div><%= link_to "Destroy this kitten", kitten_path(@kitten), method: :delete %></div>

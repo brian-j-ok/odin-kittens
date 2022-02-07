@@ -7,7 +7,11 @@
         <li><%= "Softness: #{kitten.softness}" %></li>
     </ul>
     <div><%= link_to "See #{kitten.name}!", kitten_path(kitten) %></div>
+    <div><%= link_to "Destroy this kitten", kitten_path(kitten), method: :delete %></div>
     <% end %>
 <% else %>
     <h1>No Kittens!!!</h1>
 <% end %>
+<br>
+
+<div><%= link_to "Make a new kitten!", new_kitten_path %></div>
