@@ -6,6 +6,7 @@
         <li><%= "Cuteness: #{kitten.cuteness}" %></li>
         <li><%= "Softness: #{kitten.softness}" %></li>
     </ul>
+    <div><%= link_to "See #{kitten.name}!", kitten_path(kitten) %></div>
     <% end %>
 <% else %>
     <h1>No Kittens!!!</h1>
