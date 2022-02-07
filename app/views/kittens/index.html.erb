@@ -1,0 +1,12 @@
+<% if @kittens.any? %>
+    <% @kittens.each do |kitten| %>
+    <h1><%= kitten.name %></h1>
+    <ul>
+        <li><%= "Age: #{kitten.age}" %></li>
+        <li><%= "Cuteness: #{kitten.cuteness}" %></li>
+        <li><%= "Softness: #{kitten.softness}" %></li>
+    </ul>
+    <% end %>
+<% else %>
+    <h1>No Kittens!!!</h1>
+<% end %>

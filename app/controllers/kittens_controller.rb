@@ -13,11 +13,11 @@ class KittensController < ApplicationController
 
     def create
         @kitten = Kitten.new(kitten_params)
-        
+
         if @kitten.save
-            redirect_to :action => 'show'
+            redirect_to @kitten
         else
-            render :action => 'new'
+            render :new
         end
     end
 
@@ -28,10 +28,10 @@ class KittensController < ApplicationController
     def update
         @kitten = Kitten.find(params[:id])
 
-        if @kitten.update_attributes(kitten_params)
-            redirect_to :action => 'show', :id => @kitten
+        if @kitten.update(kitten_params)
+            redirect_to @kitten
         else
-            render :action => 'edit'
+            render :edit
         end
     end
 
